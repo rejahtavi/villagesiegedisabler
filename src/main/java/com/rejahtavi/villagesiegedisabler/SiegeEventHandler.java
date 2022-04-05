@@ -1,19 +1,18 @@
-package com.rejahtavi.villagesiegedisabler.common;
+package com.rejahtavi.villagesiegedisabler;
 
-
-import com.rejahtavi.villagesiegedisabler.VillageSiegeDisabler;
-
+import net.minecraft.village.VillageSiege;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.event.village.VillageSiegeEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.event.village.VillageSiegeEvent;
 
 @Mod.EventBusSubscriber(modid = VillageSiegeDisabler.MODID, value = Dist.DEDICATED_SERVER)
-public class ServerLogic {
+public class SiegeEventHandler {
 
     @SubscribeEvent
     public static void onVillageSiege(VillageSiegeEvent event) {
+        event.getSiege().siegeState = VillageSiege.State.SIEGE_DONE;
         event.setCanceled(true);
-        System.out.println("Village siege spawn attempt canceled.");
+        //System.err.println("===== VILLAGE SIEGE CANCELED =====");
     }
 }

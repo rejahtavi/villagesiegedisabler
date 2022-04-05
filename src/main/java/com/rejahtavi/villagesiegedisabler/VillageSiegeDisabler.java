@@ -1,6 +1,5 @@
 package com.rejahtavi.villagesiegedisabler;
 
-import com.rejahtavi.villagesiegedisabler.common.ServerLogic;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 
@@ -12,9 +11,8 @@ public class VillageSiegeDisabler {
     public static final String MODNAME = "Village Siege Disabler";
     public static final String VERSION = "0.5";
 
-        // Constructor & initialization
+    // Constructor & initialization
     public VillageSiegeDisabler() {
-        MinecraftForge.EVENT_BUS.register(ServerLogic.class);
-        MinecraftForge.EVENT_BUS.register(this);
+        MinecraftForge.EVENT_BUS.register(SiegeEventHandler.class);
     }
 }

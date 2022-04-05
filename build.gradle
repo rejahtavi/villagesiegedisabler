@@ -12,7 +12,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '0.5'
+version = '1.0'
 group = 'com.rejahtavi.villagesiegedisabler' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'villagesiegedisabler'
 
@@ -34,7 +34,7 @@ minecraft {
     mappings channel: 'official', version: '1.16.5'
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
 
-    // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
 
     // Default run configurations.
     // These can be tweaked, removed, or duplicated as needed.
@@ -59,7 +59,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                betterflight {
+                villagesiegedisabler {
                     source sourceSets.main
                 }
             }
@@ -123,10 +123,6 @@ sourceSets {
     main {
         resources { srcDir 'src/generated/resources' }
     }
-}
-
-repositories {
-    maven { url = "https://maven.theillusivec4.top/" }
 }
 
 dependencies {

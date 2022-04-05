@@ -16,14 +16,14 @@ This mod removes the vanilla mechanic of zombies being able
 to spawn in villages at midnight regardless of light level.
 '''
 
-[[dependencies.betterflight]]
+[[dependencies.villagesiegedisabler]]
     modId="forge"
     mandatory=true
     versionRange="[36,)"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.betterflight]]
+[[dependencies.villagesiegedisabler]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.16.5]"
