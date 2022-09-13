@@ -1,0 +1,31 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="https://www.gnu.org/licenses/gpl-3.0.en.html"
+issueTrackerURL="https://github.com/rejahtavi/villagesiegedisabler/issues" #optional
+
+[[mods]]
+modId="villagesiegedisabler"
+version="${file.jarVersion}"
+displayName="VillageSiegeDisabler" #mandatory
+displayURL="https://www.curseforge.com/minecraft/mc-mods/village-siege-disabler"
+logoFile="logo.png"
+credits="Rejah Tavi"
+authors="Rejah Tavi"
+description='''
+This mod removes the vanilla mechanic of zombies being able
+to spawn in villages at midnight regardless of light level.
+'''
+
+[[dependencies.villagesiegedisabler]]
+    modId="forge"
+    mandatory=true
+    versionRange="[42,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.villagesiegedisabler]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.19.2]"
+    ordering="NONE"
+    side="BOTH"
